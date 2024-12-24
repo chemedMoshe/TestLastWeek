@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Pages from './component/Pages';
 import { DisplayEnum } from './Types/Display';
 import ResponsiveAppBar from './component/responsive';
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import {  Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './component/Home';
 
 export default function App() {
@@ -21,7 +21,7 @@ useEffect(() => {
       <ResponsiveAppBar setDisplay={setDisplay} setSelected={setSelected} />
       
         <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<Home   setSelected={setSelected}/>} />
           <Route path='pages' element={ <Pages display={display} setDisplay={setDisplay} selected={selected} />} />
         </Routes>
     </div>
