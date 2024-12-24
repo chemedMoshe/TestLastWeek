@@ -6,8 +6,8 @@ interface Props {
     selected: string | null;
     options: string[] | null[];
       setOptions: React.Dispatch<React.SetStateAction<string[] | null[]>>;
-      setFromYear: React.Dispatch<React.SetStateAction<number>>;
-      setToYear: React.Dispatch<React.SetStateAction<number>>;
+      setFromYear: React.Dispatch<React.SetStateAction<number|undefined>>;
+      setToYear: React.Dispatch<React.SetStateAction<number|undefined>>;
       fromYear?: number;
       toYear?: number;
       yearForGname: number

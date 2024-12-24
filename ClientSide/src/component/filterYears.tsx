@@ -4,7 +4,7 @@ import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 interface Props {
     yearForGname: number
-    setYearForGname: React.Dispatch<React.SetStateAction<number>>
+    setYearForGname: React.Dispatch<React.SetStateAction<number|undefined>>
     org:string
     setOrg:React.Dispatch<React.SetStateAction<string>>
 }
