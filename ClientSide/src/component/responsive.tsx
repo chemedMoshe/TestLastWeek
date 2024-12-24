@@ -14,9 +14,6 @@ import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import { DisplayEnum } from '../Types/Display';
-import { useAppDispatch } from '../redux/store';
-import { extraReducerBySelect } from '../Utils/ExtraReduserBySelect';
-import { fetchHighNkillCases, fetchMarkers } from '../redux/extraReduser/Cases';
 
 interface Props {
   setDisplay: React.Dispatch<React.SetStateAction<DisplayEnum>>;

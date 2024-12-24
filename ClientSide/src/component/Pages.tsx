@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react';
 import OpenLayersMap, { Marker } from './Map';
 import { useSelector } from 'react-redux';
-import { RootState, useAppDispatch } from '../redux/store';
+import { RootState } from '../redux/store';
 import { DisplayEnum } from '../Types/Display';
 import Grafs from './Grafs';
 import { returnGrafOrMap } from '../Utils/SetOption';
-import { useNavigate } from 'react-router-dom';
 import Home from './Home';
-import { fetchHighNkillCases } from '../redux/extraReduser/Cases';
-import { extraReducerBySelect } from '../Utils/ExtraReduserBySelect';
-import SelectCantry from './SelectCantry';
 
 interface Props {
   display: DisplayEnum;

@@ -1,5 +1,4 @@
-import Filtering from './filtering';
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { RootState, useAppDispatch } from '../redux/store';
 import { fetchCasesByYears, fetchHighNkillCases } from '../redux/extraReduser/Cases';
