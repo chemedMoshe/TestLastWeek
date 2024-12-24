@@ -3,20 +3,19 @@ import FilteringYears from "./FilteringYears";
 import FilterYears from "./filterYears";
 
 interface Props {
-    comp:JSX.Element
     selected: string | null;
     options: string[] | null[];
       setOptions: React.Dispatch<React.SetStateAction<string[] | null[]>>;
-      setFromYear: React.Dispatch<React.SetStateAction<number|undefined>>;
-      setToYear: React.Dispatch<React.SetStateAction<number|undefined>>;
+      setFromYear: React.Dispatch<React.SetStateAction<number>>;
+      setToYear: React.Dispatch<React.SetStateAction<number>>;
       fromYear?: number;
       toYear?: number;
       yearForGname: number
-      setYearForGname: React.Dispatch<React.SetStateAction<number>>
+      setYearForGname: React.Dispatch<React.SetStateAction<number|undefined>>
       org:string
       setOrg:React.Dispatch<React.SetStateAction<string>>
 }
-export default function ReturnCompBySelected({setYearForGname,selected,comp,options, setOptions, setFromYear, setToYear, fromYear, toYear, yearForGname,org,setOrg}: Props) {
+export default function ReturnCompBySelected({setYearForGname,selected,options, setOptions, setFromYear, setToYear, fromYear, toYear, yearForGname,org,setOrg}: Props) {
  
     return   selected === "Option 1" ? <Filtering setOptions={setOptions} options={options}/>
     :

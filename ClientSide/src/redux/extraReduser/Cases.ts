@@ -33,7 +33,7 @@ export const fetchMarkers = createAsyncThunk("cases/fetchMarkers", async (_: str
 export const fetchBoldGname = createAsyncThunk("cases/fetchBoldGname", async (_:{cantry:string,amount:number|undefined}, thunkApi) => {
 
     const response = await getBoldGname(_.cantry,_.amount!);
-
+    
     if (!response) {
         return thunkApi.rejectWithValue(response);
     }

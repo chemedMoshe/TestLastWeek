@@ -23,7 +23,7 @@ useEffect(() => {
 },[selected])
   return (
     <div className='app'>
-      <ResponsiveAppBar setDisplay={setDisplay} setSelected={setSelected} />
+      <ResponsiveAppBar setDisplay={setDisplay} setSelected={setSelected} selected={selected!}/>
       
         <Routes>
           <Route index element={<Home   setSelected={setSelected}/>} />

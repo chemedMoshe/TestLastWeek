@@ -49,7 +49,8 @@ const caseMap = createSlice({
         builder.addCase(fetchBoldGname.fulfilled, (state, action) => {
             state.loading = false
             state.error = true
-            state.success = action.payload   
+            state.success = true
+            state.markers = action.payload   
         })
        builder.addCase(fetchGetbyStorGname.pending, (state, action) => {
            state.loading = true

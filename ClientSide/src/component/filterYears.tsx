@@ -16,7 +16,7 @@ export default function FilterYears({ setYearForGname,yearForGname ,org, setOrg}
             socket.on('sendYears', (res: number[]) => setYear(res));
             socket.emit("getAllOrg",yearForGname)
             socket.on("sendOrg", (res: string[]) => setAllOrganizations(res));
-        }, [yearForGname]);
+        }, []);
             
   return (
     <div>

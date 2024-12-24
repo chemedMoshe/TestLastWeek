@@ -32,7 +32,7 @@ export default function Grafs({ selected }: Props) {
   return (
     <div className='grafs'>
       <div>
-        <ReturnCompBySelected selected={selected}org={org} setOrg={setOrg} yearForGname={yearForGname!} comp={<Home />} options={options} setOptions={setOptions} setFromYear={setFromYear} setToYear={setToYear} fromYear={fromYear} toYear={toYear}  setYearForGname={setYearForGname}/>
+        <ReturnCompBySelected selected={selected} org={org} setOrg={setOrg} yearForGname={yearForGname!}  options={options} setOptions={setOptions} setFromYear={setFromYear} setToYear={setToYear} fromYear={fromYear} toYear={toYear}  setYearForGname={setYearForGname}/>
       </div>
       <div className='displayGraf'>
         <ResponsiveContainer width="100%" height="60%">

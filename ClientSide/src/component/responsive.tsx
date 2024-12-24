@@ -18,9 +18,10 @@ import { DisplayEnum } from '../Types/Display';
 interface Props {
   setDisplay: React.Dispatch<React.SetStateAction<DisplayEnum>>;
   setSelected: React.Dispatch<React.SetStateAction<string | null>>;
+  selected: string
 }
 
-function ResponsiveAppBar({ setDisplay, setSelected }: Props) {
+function ResponsiveAppBar({ setDisplay, setSelected, selected }: Props) {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [view, setView] = React.useState<DisplayEnum | string>("grafs");
   const [option, setOption] = React.useState('Select');
@@ -116,7 +117,7 @@ function ResponsiveAppBar({ setDisplay, setSelected }: Props) {
             </Menu>
           </Box>
 
-          {option === "Option 4" && <Box sx={{ display: "flex", justifyContent: "center" }}>
+          {selected === "Option 4" && <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Button
               variant={'contained'}
               color="primary"
@@ -128,7 +129,6 @@ function ResponsiveAppBar({ setDisplay, setSelected }: Props) {
 
           </Box>
           }
-          {/* Select Dropdown */}
           <FormControl sx={{ minWidth: 10, margin: 1, border: "hidden", ":hover": { border: "hidden" } }}>
             <InputLabel
               sx={{ color: "white" }}

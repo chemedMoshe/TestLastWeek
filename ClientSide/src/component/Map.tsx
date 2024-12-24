@@ -41,6 +41,7 @@ export default function OpenLayersMap({ markers, selected }: MapComponentProps) 
   const dispatch = useDispatch();
   const loading = useSelector((state: RootState) => state.Map.loading);
   const success = useSelector((state: RootState) => state.Map.success);
+ 
   useEffect(() => {
     if (selected === 'Option 2') {
       appdispatch(fetchMarkers(selectCantry));
@@ -58,6 +59,7 @@ export default function OpenLayersMap({ markers, selected }: MapComponentProps) 
       dispatch(addData(markers));
     }
   }, [success]);
+  
   useEffect(() => {
     if (map && markers.length >= 1) {
       const newLocation = markers[0].location;
@@ -71,6 +73,7 @@ export default function OpenLayersMap({ markers, selected }: MapComponentProps) 
       });
     }
   }, [markers, map]);
+  
   useEffect(() => {
     if (map) {
       return
@@ -141,7 +144,7 @@ export default function OpenLayersMap({ markers, selected }: MapComponentProps) 
 
       vectorSource.current.addFeature(feature);
     });
-  }, [markers]);
+  }, [markers,selected]);
 
   return (
     
