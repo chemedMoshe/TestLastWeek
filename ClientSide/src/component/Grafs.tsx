@@ -15,8 +15,8 @@ export default function Grafs({ selected }: Props) {
   const dataKey: TypereturnTools = returnToolsfotGraf(selected)!;
   const appDispatch = useAppDispatch();
   const [options, setOptions] = useState<string[] | null[]>([null]);
-  const [fromYear, setFromYear] = useState<number>();
-  const [toYear, setToYear] = useState<number>();
+  const [fromYear, setFromYear] = useState<number>(1970);
+  const [toYear, setToYear] = useState<number>(2017);
   const [yearForGname, setYearForGname] = useState<number>();
   const [org,setOrg] = useState<string>("")
   useEffect(() => {
