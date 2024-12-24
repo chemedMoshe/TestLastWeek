@@ -21,6 +21,6 @@ export default function ReturnCompBySelected({setYearForGname,selected,comp,opti
     return   selected === "Option 1" ? <Filtering setOptions={setOptions} options={options}/>
     :
     selected === "Option 3" ? <FilteringYears setFromYear={setFromYear} setToYear={setToYear} fromYear={fromYear} toYear={toYear}/>:
-    selected === "Option 5" ? <FilterYears setYearForGname={setYearForGname} yearForGname={yearForGname} org={org} setOrg={setOrg} />: comp
+    selected === "Option 5" ? <FilterYears setYearForGname={setYearForGname} yearForGname={yearForGname} org={org} setOrg={setOrg} />: null
   
 }

@@ -33,7 +33,7 @@ export default function OpenLayersMap({ markers, selected }: MapComponentProps) 
   const popupRef = useRef<HTMLDivElement | null>(null);
   const [map, setMap] = useState<Map | null>(null);
   const vectorSource = useRef<VectorSource>(new VectorSource());
-  const [selectCantry, setSelectCantry] = useState<string|null>(null);
+  const [selectCantry, setSelectCantry] = useState<string|null>("Israel");
   const [locationMap, setLocationMap] = useState<[number, number]>([35.2137, 31.7683]);
   const [amount, setAmount] = useState<number|undefined>();
   const[org,setOrg] = useState<string>("")
@@ -146,8 +146,10 @@ export default function OpenLayersMap({ markers, selected }: MapComponentProps) 
   return (
     
     <div className="map-container">
-     {selected === "Option 2" || selected === "Option 4" && <SelectCantry setSelectCantry={setSelectCantry} setLocationMap={setLocationMap} setAmount={setAmount} selected={selected} amount={amount!}/>
-}
+     {selected === "Option 2"  && <SelectCantry selectCantry={selectCantry} setSelectCantry={setSelectCantry} setLocationMap={setLocationMap} setAmount={setAmount} selected={selected} amount={amount!}/>}
+     {selected === "Option 4"  && <SelectCantry setSelectCantry={setSelectCantry} setLocationMap={setLocationMap} setAmount={setAmount} selected={selected} amount={amount!}/>}
+
+
 {selected === "Option 6" && <SelectGname org={org} setOrg={setOrg}/>}
       <div className='Map'
         ref={mapRef} />

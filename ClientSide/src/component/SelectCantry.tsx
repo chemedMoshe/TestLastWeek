@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 
 interface Props {
     selected:string
-    setSelectCantry:React.Dispatch<React.SetStateAction<string>>
+    selectCantry:string
+    setSelectCantry:React.Dispatch<React.SetStateAction<string|null>>
     setAmount:React.Dispatch<React.SetStateAction<number|undefined>>
+    setLocationMap:React.Dispatch<React.SetStateAction<[number, number]>>
     amount:number
 }
-export default function SelectCantry({setSelectCantry,setAmount,selected,amount}:Props) {
+export default function SelectCantry({setSelectCantry,setAmount,selected,amount,selectCantry}:Props) {
     const [cantry, setCantry] = useState<string[]>([]);
-    const [currentCantry, setCurrentCantry] = useState<string>("");
     useEffect(() => {
      socket.emit('getCantry');
      socket.on('sendCantry', (res: string[]) => setCantry(res));   
@@ -22,7 +23,7 @@ export default function SelectCantry({setSelectCantry,setAmount,selected,amount}
     return (
         <div className="selectCantry">
             <select 
-            value={currentCantry}
+            value={selectCantry}
             onChange={(e:any)=>handleCantry(e.target.value)}>
             {cantry.map((e,i)=><option key={i}  value={e}>{e}</option>)}
             </select>

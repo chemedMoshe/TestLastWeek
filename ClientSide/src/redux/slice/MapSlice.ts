@@ -20,10 +20,14 @@ const caseMap = createSlice({
     extraReducers: (builder) => {
         builder.addCase(fetchMarkers.pending, (state, action) => {
             state.loading = true
+            state.error = false
+            state.success = false
         })
         builder.addCase(fetchMarkers.rejected, (state, action) => {
             state.error = true
             state.loading = false
+            state.success = false
+
         })
         builder.addCase(fetchMarkers.fulfilled, (state, action) => {
             state.markers = action.payload
@@ -37,7 +41,26 @@ const caseMap = createSlice({
             state.error = false
             state.success = false   
         })
-       
+        builder.addCase(fetchBoldGname.rejected, (state, action) => {
+            state.loading = false
+            state.error = true
+            state.success = false   
+        })
+        builder.addCase(fetchBoldGname.fulfilled, (state, action) => {
+            state.loading = false
+            state.error = true
+            state.success = action.payload   
+        })
+       builder.addCase(fetchGetbyStorGname.pending, (state, action) => {
+           state.loading = true
+           state.error = false
+           state.success = false
+       })
+        builder.addCase(fetchGetbyStorGname.rejected, (state, action) => {
+            state.loading = false
+            state.error = true
+            state.success = false
+        })
         builder.addCase(fetchGetbyStorGname.fulfilled, (state, action: PayloadAction<ExtraMarker[]>) => {
             state.markers = action.payload
             state.loading = false
