@@ -90,9 +90,9 @@ export const sidCantry = async () => {
 };
 export const sidTypeCases = async()=>{
     const data = await CasesModel.find({})
-    const types = {}
+    const types:{[key:string]:any} = {}
     data.filter(x => x.attacktype1_txt != "Unknown")
-    .forEach(x => {
+    .forEach((x:any) => {
         types[x.attacktype1_txt]= 0
     })
     for(let c of Object.keys(types)){
