@@ -82,7 +82,7 @@ export const getAllOrg = async (iyear:number|null) => {
       });
     
    const res = iyear? data.length > 50 ? data.slice(data.length - 50, data.length-1) : data
-   :data.map(x => x.name).slice(0,50)
+   :data.map((x:any) => x.name).slice(0,50)
    return res
     }    catch(e){
         return []
