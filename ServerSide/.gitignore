@@ -2,6 +2,7 @@ public
 /dist
 node_module
 /public
+.env
 # Logs
 logs
 *.log
