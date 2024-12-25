@@ -61,6 +61,7 @@ io.on("connection", (socket) => {
         }
     });
 
+    
     //reading all cases
     socket.on("getAllCases", async () => {
         try {
