@@ -1,6 +1,6 @@
 export const getCasesByHighNkill = async(options:string[]|null[])=>{
     try{
-    const data = await fetch('http://localhost:2021/api/analysis/deadliest-attack-types/',{
+    const data = await fetch('https://testlastweek.onrender.com/api/analysis/deadliest-attack-types/',{
         method:"POST",
         headers: {
             'Content-Type': 'application/json'
