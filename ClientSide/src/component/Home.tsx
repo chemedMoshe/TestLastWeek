@@ -36,7 +36,7 @@ export default function Home({ setSelected}: Props) {
       </Typography>
       <Grid container spacing={2} justifyContent="center">
         {options.map((option, index) => (
-          <Grid item key={index}  xs={12} sm={6} md={4}>
+          <Grid item key={index}  xs={0} sm={0} md={0}>
             <Button
               fullWidth
               variant="contained"
