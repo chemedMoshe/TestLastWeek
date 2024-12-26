@@ -84,7 +84,7 @@ const CaseForm: React.FC<{ onSubmit: (data: any) => void }> = ({ onSubmit }) => 
         { name: "nkill", label: "Number Killed", type: "number" },
         { name: "nwound", label: "Number Wounded", type: "number" },
       ].map(({ name, label, type = "text" }) => (
-        <Box key={name} sx={{ m: "1%"}}>
+        <Box key={name} sx={{ display: "flex", flexDirection: "column" }}>
           <TextField
             name={name}
             label={label}
@@ -92,7 +92,7 @@ const CaseForm: React.FC<{ onSubmit: (data: any) => void }> = ({ onSubmit }) => 
             value={(formData as any)[name]}
             onChange={handleChange}
             fullWidth
-            variant="outlined"
+            variant="standard"
             sx={{
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
@@ -122,6 +122,7 @@ const CaseForm: React.FC<{ onSubmit: (data: any) => void }> = ({ onSubmit }) => 
         variant="contained"
         fullWidth
         sx={{
+          marginTop:"3%",
           backgroundColor: "#2196f3",
           color: "#fff",
           fontWeight: "bold",
