@@ -31,7 +31,7 @@ export default function Home({ setSelected}: Props) {
         alignItems: "center",
       }}
     >
-      <Typography variant="h4" gutterBottom>
+      <Typography sx={{ fontSize: "2rem", fontWeight: "bold", mb: 2, width: "100%", textAlign: "center" }}>
         Welcome to the Home Page
       </Typography>
       <Grid container spacing={2} justifyContent="center">
@@ -43,9 +43,8 @@ export default function Home({ setSelected}: Props) {
               color="primary"
               onClick={()=>handleSelectChange(option.label)}
               sx={{
-                py: 2,
+              
                 fontSize: "1rem",
-                textTransform: "none",
                 borderRadius: "8px",
               }}
             >
