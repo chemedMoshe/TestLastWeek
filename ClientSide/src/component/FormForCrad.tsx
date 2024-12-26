@@ -59,10 +59,8 @@ const CaseForm: React.FC<{ onSubmit: (data: any) => void }> = ({ onSubmit }) => 
         margin: "5% auto",
         padding: 3,
         backgroundColor: "#f5f5f5",
-        borderRadius: 3,
         boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
         "@media (max-width: 600px)": {
-          width: "90%",
           padding: 2,
         },
       }}
@@ -86,7 +84,7 @@ const CaseForm: React.FC<{ onSubmit: (data: any) => void }> = ({ onSubmit }) => 
         { name: "nkill", label: "Number Killed", type: "number" },
         { name: "nwound", label: "Number Wounded", type: "number" },
       ].map(({ name, label, type = "text" }) => (
-        <Box key={name} sx={{ mb: 2 }}>
+        <Box key={name} sx={{ m: "1%"}}>
           <TextField
             name={name}
             label={label}
@@ -126,10 +124,8 @@ const CaseForm: React.FC<{ onSubmit: (data: any) => void }> = ({ onSubmit }) => 
         sx={{
           backgroundColor: "#2196f3",
           color: "#fff",
-          padding: "10px 20px",
           fontWeight: "bold",
           textTransform: "uppercase",
-          letterSpacing: "1px",
           "&:hover": {
             backgroundColor: "#1e88e5",
           },
