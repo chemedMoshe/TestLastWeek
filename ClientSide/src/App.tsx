@@ -11,7 +11,7 @@ export default function App() {
   const [selected, setSelected] = useState<string|null>("Select");
 const navigte = useNavigate();
 useEffect(() => {
-  if(selected === "CRAD"){
+  if(selected === "CRUD"){
      navigte('/crad');
      return 
   }
