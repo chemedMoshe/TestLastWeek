@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function CradComponent() {
   const [message, setMessage] = useState("");
+  
   const handleSabmit = (data: any)=>{
     socket.emit("createCase",data)
     socket.on("caseCreated", (res: any) => setMessage(res.message))

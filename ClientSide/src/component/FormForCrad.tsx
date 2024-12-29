@@ -51,7 +51,6 @@ const CaseForm: React.FC<{ onSubmit: (data: any) => void }> = ({ onSubmit }) => 
   return (
     <Box
       component="form"
-      onSubmit={handleSubmit}
       noValidate
       sx={{
         maxWidth: "100%",
@@ -120,6 +119,7 @@ const CaseForm: React.FC<{ onSubmit: (data: any) => void }> = ({ onSubmit }) => 
       <Button
         type="submit"
         variant="contained"
+        onClick={handleSubmit}
         fullWidth
         sx={{
           marginTop:"3%",

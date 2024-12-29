@@ -6,7 +6,7 @@ import store from './redux/store.ts';
 import { io } from "socket.io-client";
 import { BrowserRouter } from 'react-router-dom';
 
-export const socket = io("https://testlastweek.onrender.com/");
+export const socket = io("http://localhost:2021/");
 
 createRoot(document.getElementById('root')!).render(
  

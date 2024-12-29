@@ -2,7 +2,7 @@ import { DisplayEnum } from "../Types/Display";
 
 export const returnGrafOrMap = (setDisplay:React.Dispatch<React.SetStateAction<DisplayEnum>>,option:string) => {
     if(option == "about") setDisplay(DisplayEnum.ABOUT);
-    if(option == "Option 4") return
+    if(option == "Option 4" || option == "crad") return setDisplay("" as DisplayEnum);
     option == "Option 1" || option == "Option 5" || option == "Option 3" ?
      setDisplay(DisplayEnum.GRAFS) 
      : 
