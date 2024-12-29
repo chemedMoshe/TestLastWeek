@@ -15,7 +15,7 @@ export default function Home({ setSelected}: Props) {
     { label: "Option 4", route: "/option4" },
     { label: "Option 5", route: "/option5" },
     { label: "Option 6", route: "/option6" },
-    { label: "CRAD", route: "/crad" },
+    { label: "CRUD", route: "/crad" },
   ];
 
   return (
