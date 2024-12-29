@@ -5,7 +5,6 @@ import { RootState } from '../redux/store';
 import { DisplayEnum } from '../Types/Display';
 import Grafs from './Grafs';
 import { returnGrafOrMap } from '../Utils/SetOption';
-import Home from './Home';
 
 interface Props {
   display: DisplayEnum;
