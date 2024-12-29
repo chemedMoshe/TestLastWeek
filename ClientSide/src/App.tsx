@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Pages from './component/Pages';
 import { DisplayEnum } from './Types/Display';
-import ResponsiveAppBar from './component/responsive';
+import ResponsiveAppBar from './component/responsive-nav';
 import {  Route, Routes, useNavigate } from 'react-router-dom';
 import Home from './component/Home';
 import CradComponent from './component/CradComponent';
@@ -29,7 +29,7 @@ useEffect(() => {
         <Routes>
           <Route index element={<Home   setSelected={setSelected}/>} />
           <Route path='pages' element={ <Pages display={display} setDisplay={setDisplay} selected={selected} />} />
-          <Route path='crad' element={ <CradComponent />} />
+          <Route path='crad/*' element={ <CradComponent />} />
         </Routes>
     </div>
   );

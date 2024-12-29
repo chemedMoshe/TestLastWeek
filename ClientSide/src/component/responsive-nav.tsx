@@ -53,9 +53,10 @@ function ResponsiveAppBar({ setDisplay, setSelected, selected }: Props) {
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
+            onClick={()=>handleSelectChange("Select")}
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/Select"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },

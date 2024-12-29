@@ -23,7 +23,7 @@ export default function Pages({ display, setDisplay, selected }: Props) {
   return (
     <>
       {display === DisplayEnum.MAPS && <OpenLayersMap markers={markers as Marker[]} selected={selected!}/>}
-      {display === DisplayEnum.GRAFS && <Grafs selected={selected!} datas={datas!} />}
+      {display === DisplayEnum.GRAFS && <Grafs selected={selected!} datas={datas} />}
     </>
   );
 
